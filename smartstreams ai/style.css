@@ -1,0 +1,325 @@
+@font-face {
+    font-family: grotesk;
+    src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+canvas {
+    height: 100vh;
+    z-index: -100000;
+    position: absolute;
+    top: 0px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: grotesk;
+    background-color: #f7f7f7;
+}
+
+body nav {
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    flex: 1;
+    margin-left: 10%;
+    max-width: 150px;
+}
+
+.nav-links {
+    font-size: 2rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links a {
+    color: black;
+    padding-bottom: 0.5%;
+    position: relative;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: -1px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.btn {
+    margin-left: 2%;
+    margin-right: 10%;
+    font-family: grotesk;
+    font-size: 5rem;
+    color: #438E9C;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.btn,
+.btn1 {
+    font-family: grotesk;
+    font-size: 1.5rem;
+    color: #438E9C;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-color: #438E9C;
+}
+
+
+.btn::before,
+.btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #438E9C;
+    z-index: -1;
+    transition: left 0.3s ease;
+}
+
+.btn:hover,
+.btn1:hover {
+    color: white;
+}
+
+.btn:hover::before,
+.btn1:hover::before {
+    left: 0;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+header .content {
+    margin-top: 18%;
+}
+
+header .content h1 {
+    font-size: 90px;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #438E9C;
+}
+
+.btn1 {
+    font-family: grotesk;
+    font-size: 2rem;
+    color: #438E9C;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.aboutus {
+    height: 700px;
+    background-color: #fffff9;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourservices {
+    min-height: 900px;
+    background-color: #fffff9;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.about h1,
+.services h1,
+.reach-us h1 {
+    color: #438E9C;
+    margin-bottom: 4rem;
+}
+
+.textdivision {
+    height: 350px;
+    background-color: black;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.textcontainer h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.textcontainer h1 span {
+    color: #438E9C;
+}
+
+.ourservices {
+    background-color: #fffff9;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
+.servicescontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+}
+
+.service {
+    flex: 1;
+    margin: 2rem;
+    padding: 4rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service img {
+    max-width: 100px;
+    opacity: 0.65;
+    margin-bottom: 2rem;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    font-size: 1.7rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.reach-us {
+    background-color: #fffff9;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    align-items: center;
+}
+
+.footer-line {
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: auto;
+}
+
+.footer-container nav {
+    padding: 0.2rem 0rem;
+}
+
+footer {
+    background-color: #fffff9;
+}
+
+.footer-nav-logo {
+    flex: 1;
+    margin-left: 10%;
+    max-width: 200px;
+}
+
+.footer-links {
+    margin-right: 15%;
+    display: flex;
+    float: right;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.footer-links p {
+    color: black;
+}
